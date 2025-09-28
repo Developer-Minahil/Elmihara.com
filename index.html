@@ -1,0 +1,3283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ELMIHARA - Premium Perfumes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="font-inter">
+    <!-- Loading Overlay -->
+   
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-playfair font-bold text-white" id="logo">
+            <i class="fas fa-spray-can mr-2"></i>ELMIHARA
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-white hover:text-purple-300 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#products"
+              class="text-white hover:text-purple-300 transition-colors duration-300"
+              >Products</a
+            >
+            <a
+              href="#about"
+              class="text-white hover:text-purple-300 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-purple-300 transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Cart and Mobile Menu -->
+          <div class="flex items-center space-x-4">
+            <button
+              id="cart-btn"
+              class="relative text-white hover:text-purple-300 transition-colors duration-300"
+            >
+              <!-- <i class="fas fa-shopping-cart text-xl"></i> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+
+              <span
+                id="cart-count"
+                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                >0</span
+              >
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a
+            href="#home"
+            class="block text-white hover:text-purple-300 py-2 transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#products"
+            class="block text-white hover:text-purple-300 py-2 transition-colors duration-300"
+            >Products</a
+          >
+          <a
+            href="#about"
+            class="block text-white hover:text-purple-300 py-2 transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="block text-white hover:text-purple-300 py-2 transition-colors duration-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+     
+
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+      ></div>
+      <div class="text-center px-6 max-w-4xl mx-auto relative z-10">
+        <div class="float">
+          <i class="fas fa-gem text-6xl mb-6 text-purple-300"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-6 fade-in">
+          Discover Your
+          <span
+            class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            >Signature Scent</span
+          >
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 font-light fade-in opacity-90">
+          Luxury perfumes crafted with the finest ingredients from around the
+          world
+        </p>
+        <div class="space-x-4 fade-in">
+          <a
+            href="#products"
+            class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 inline-block transform hover:scale-105"
+          >
+            Shop Collection
+          </a>
+          <a
+            href="#about"
+            class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 inline-block"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating Elements -->
+      <div
+        class="absolute top-20 left-10 text-purple-300 opacity-20 float"
+        style="animation-delay: -2s"
+      >
+        <i class="fas fa-star text-4xl"></i>
+      </div>
+      <div
+        class="absolute bottom-20 right-10 text-blue-300 opacity-20 float"
+        style="animation-delay: -4s"
+      >
+        <i class="fas fa-heart text-3xl"></i>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl font-playfair font-bold mb-4">
+            Why Choose Elmihara?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Experience the difference with our premium collection
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg">
+            <div
+              class="bg-gradient-to-r from-purple-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-leaf text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Natural Ingredients</h3>
+            <p class="text-gray-600">
+              Sourced from the finest natural ingredients worldwide for
+              authentic, long-lasting fragrances
+            </p>
+          </div>
+
+          <div
+            class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="bg-gradient-to-r from-purple-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-award text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Award Winning</h3>
+            <p class="text-gray-600">
+              Recognized globally for excellence in perfumery and innovative
+              fragrance compositions
+            </p>
+          </div>
+
+          <div
+            class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="bg-gradient-to-r from-purple-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Free Shipping</h3>
+            <p class="text-gray-600">
+              Complimentary worldwide shipping on all orders with secure and
+              fast delivery
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="perfume-notes" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-center text-2xl md:text-3xl font-playfair font-bold mb-6"
+        >
+          SHOP BY PERFUME NOTE
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Woody Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://media.istockphoto.com/id/1056826174/photo/wood-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=cuZXltJgm39Bwy98rucYooMLCaolB7v0w86wX1lxLAU=');
+            "
+          >
+            WOODY PERFUMES
+          </div>
+
+          <!-- Spicy Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1714218740815-164f69e7f11e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BpY3klMjBwZXJmdW1lc3xlbnwwfHwwfHx8MA%3D%3D');
+            "
+          >
+            SPICY PERFUMES
+          </div>
+
+          <!-- Aquatic Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1619434714078-807da97dd597?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEFxdWF0aWMlMjBwZXJmdW1lc3xlbnwwfHwwfHx8MA%3D%3D');
+            "
+          >
+            AQUATIC PERFUMES
+          </div>
+
+          <!-- Aromatic Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1587304946976-cbbbafce2133?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXJvbWF0aWMlMjBwZXJmdW1lc3xlbnwwfHwwfHx8MA%3D%3D');
+            "
+          >
+            AROMATIC PERFUMES
+          </div>
+
+          <!-- Floral Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1713998525908-69c60daae07d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RmxvcmFsJTIwcGVyZnVtZXN8ZW58MHx8MHx8fDA%3D');
+            "
+          >
+            FLORAL PERFUMES
+          </div>
+
+          <!-- Citrus Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1706626174502-160c04fc25d1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2l0cnVzJTIwcGVyZnVtZXN8ZW58MHx8MHx8fDA%3D');
+            "
+          >
+            CITRUS PERFUMES
+          </div>
+
+          <!-- Fruity Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1745826420910-b301ff4154ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZydWl0eSUyMHBlcmZ1bWVzfGVufDB8fDB8fHww');
+            "
+          >
+            FRUITY PERFUMES
+          </div>
+
+          <!-- Oud Perfumes -->
+          <div
+            class="rounded-xl overflow-hidden bg-cover bg-center h-48 flex items-center justify-center text-white font-semibold text-sm tracking-widest"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1587304946998-46c19a031b44?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8b2xkJTIwcGVyZnVtZXN8ZW58MHx8MHx8fDA%3D');
+            "
+          >
+            OUD PERFUME
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products Section -->
+    <section id="products" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4">
+            Our Collection
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Discover our curated selection of luxury perfumes
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex justify-center mb-12 fade-in">
+          <div
+            class="bg-gray-100 rounded-full p-1 flex flex-wrap justify-center"
+          >
+            <button
+              class="filter-btn active px-6 py-2 rounded-full transition-all duration-300 m-1"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full transition-all duration-300 m-1"
+              data-filter="men"
+            >
+              Men
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full transition-all duration-300 m-1"
+              data-filter="women"
+            >
+              Women
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full transition-all duration-300 m-1"
+              data-filter="unisex"
+            >
+              Universal
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          id="products-grid"
+          class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+          >
+            <div class="relative">
+              <img src="https://www.ralphlaurenfragrances.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-ralphlauren-us-Library/default/dw63d18128/images/pdp/pdp-product-service-dynamic-2-RLFE012.jpg?sw=650&sh=810&sm=cut&sfrm=png&q=70"
+               alt="Polo Black"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm"
+              >
+                New
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Ralph Lauren Polo Black</h3>
+              <p class="text-gray-600 mb-4">
+                Polo black EDT 125ml 
+              </p>
+              <div class="mb-4">
+                <div>
+
+                <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 15,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span> 
+                 </div>
+
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i> 
+                  <i class="fas fa-star"></i> 
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div> 
+              </div>
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="1"
+                data-name="Rose Elegance"
+                data-price="89"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.1s"
+          >
+            <div class="relative">
+              <img
+                src="https://discounters.pk/cdn/shop/files/3_8c6898ac-b139-4094-b392-9c0449ffdf32.jpg?v=1713446751"
+                alt="Ocean Breeze"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Popular
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Ralph Lauren Polo Red</h3>
+              <p class="text-gray-600 mb-4">
+                 Polo Red EDT 125ml
+              </p>
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 18,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="2"
+                data-name="Ocean Breeze"
+                data-price="75"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.2s"
+          >
+            <div class="relative">
+              <img
+                src="https://media.naheed.pk/catalog/product/cache/2f2d0cb0c5f92580479e8350be94f387/1/0/1005421-1.jpg"
+                alt="Midnight Jasmine"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Ralph Lauren Polo Blue</h3>
+              <p class="text-gray-600 mb-4">
+                Polo Blue EDT 125ml
+              </p>
+               
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 20,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="3"
+                data-name="Midnight Jasmine"
+                data-price="95"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.3s"
+          >
+            <div class="relative">
+              <img
+                src="https://swissyarn.com/wp-content/uploads/2022/10/YSL-Y-Men-EDP-100ml-4.jpg"
+                alt="Leather & Wood"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">YSL Y EDP</h3>
+              <p class="text-gray-600 mb-4">
+                YSL Y Edp 100ml for men
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 37,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5900</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="4"
+                data-name="Leather & Wood"
+                data-price="110"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+         
+       <!--product 5-->
+              <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.3s"
+          >
+            <div class="relative">
+              <img
+                src="https://thecandyperfumeboy.com/wp-content/uploads/2020/09/img_9404.jpeg"
+                alt="Leather & Wood"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Coco Chanel</h3>
+              <p class="text-gray-600 mb-4">
+            Mademoiselle coco chanel 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 76,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="4"
+                data-name="Leather & Wood"
+                data-price="110"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+           
+             
+          <!-- Product 6 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.4s"
+          >
+            <div class="relative">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6YilWy5WN36jnCERNuEy1wc_qqqPz-VnvQ&s"
+                alt="Citrus Burst"
+                class="w-full h-64 object-cover"
+              />
+             
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Kalan EDP</h3>
+              <p class="text-gray-600 mb-4">
+                Parfums De Marley Kalan 125ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 60,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 15,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="5"
+                data-name="Citrus Burst"
+                data-price="65"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.5s"
+          >
+            <div class="relative">
+              <img
+                src="https://ramfabeauty.com/cdn/shop/files/layton-royal-essence-edp-unisex-marly-892601.jpg?v=1726724158"
+                alt="Vanilla Dreams"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Layton EDP</h3>
+              <p class="text-gray-600 mb-4">
+              Parfums De Marley Layton Edp 125ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 74,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 17,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="6"
+                data-name="Vanilla Dreams"
+                data-price="80"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.6s"
+          >
+            <div class="relative">
+              <img
+                src="https://ameena.pk/cdn/shop/files/Carolina-Herrera-212-Sexy-Cologne-Edp-Mens-Spray-3-4-Oz_1276e64a-6cdc-400d-9552-eb72caa88cb1.3360756bed18db0cc6ff5181b785fd54.webp?v=1746176292"
+                alt="Mystic Oud"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-purple-500 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Limited
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> 212 Sexy Men</h3>
+              <p class="text-gray-600 mb-4">
+                Carolina Herrera 212 sexy men 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 24,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="7"
+                data-name="Mystic Oud"
+                data-price="150"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://cdn.salla.sa/DGdDlG/a4b3412b-3015-4a5a-85ff-0e0c619432a3-1000x1000-kVofs4m4l26vMz5hl6gkiioFXwpxgWi8hXfJUQef.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cartier De Pasha</h3>
+              <p class="text-gray-600 mb-4">
+                Cartier De Pasha 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 34,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 10-->
+ <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+          >
+            <div class="relative">
+              <img
+                src="https://www.perfumedirect.com/cdn/shop/products/gucci-women-s-perfume-gucci-bamboo-eau-de-parfum-women-s-perfume-spray-50ml-75ml-3746191802461_large.png"
+                alt="Rose Elegance"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm"
+              >
+                New
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Gucci Bamboo</h3>
+              <p class="text-gray-600 mb-4">
+               Bamboo EDP 100ml
+              </p>
+            
+                <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 30,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="1"
+                data-name="Rose Elegance"
+                data-price="89"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+ <!--product 11-->
+         <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://media.naheed.pk/catalog/product/cache/2f2d0cb0c5f92580479e8350be94f387/1/0/1047774-1.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Jean Paul Gaultier</h3>
+              <p class="text-gray-600 mb-4">
+                Le Male Gaultier 125ml
+              </p>
+               
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 28,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 12--->
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://zacshop.com/cdn/shop/products/s-l1600_4.jpg?v=1676285538"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Jean Paul Intense</h3>
+              <p class="text-gray-600 mb-4">
+                Le Male Intense 125ml
+              </p>
+              
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 36,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 13-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://perfumegh.com/wp-content/uploads/2024/06/2530392-JOOP-HOMME-Le-Parfum-125-ml.75debd0f.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Joop Homme</h3>
+              <p class="text-gray-600 mb-4">
+                Homme 75ml
+              </p>
+              
+                <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 7000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 3500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!--product 14-->
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://theparfumerie.lk/wp-content/uploads/2022/06/LM_Classic_LS_01_190_B_HORIZONTAL.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Paco Rabanne Million</h3>
+              <p class="text-gray-600 mb-4">
+                Lady Million 80ml for women
+              </p>
+             
+
+             <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 20,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+      <!--product 15-->
+        <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://noors1975.com/cdn/shop/products/Y0909280_F090928009_E01_GHC_900x_88a51c75-d7f9-4493-b37d-77e6744ebb0a.jpg?v=1736006096"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dior Oud Ispahan</h3>
+              <p class="text-gray-600 mb-4">
+                Oud Ispahan 125ml 
+              </p>
+                 
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 105,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 19,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+<!--product 16-->
+   <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dweafd93dd/products/TOM_FORD/UK200002471_TOM_FORD.jpg?sw=582&sh=582"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tom Ford Black Orchid</h3>
+              <p class="text-gray-600 mb-4">
+                Tom Ford Black Orchid 100ml 
+              </p>
+              
+                  <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 40,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 12,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+         
+
+          <!--product 17-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.bluesalon.com/cdn/shop/files/TFD121PER00064_2.webp?v=1698840053"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tom Ford Ombreh Leather</h3>
+              <p class="text-gray-600 mb-4">
+               Ombreh Leather 100ml 
+              </p>
+            
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 52,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 14,500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+         
+        <!--product 18-->
+        <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://dynamic.zacdn.com/kUZNGy9lMIjmeIapDFEHNe1tY0k=/filters:quality(70):format(webp)/https://static-my.zacdn.com/p/tom-ford-8218-4959603-1.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tom Ford Oud Wood</h3>
+              <p class="text-gray-600 mb-4">
+                Tom Ford Oud Wood 100ml 
+              Exotic, woody, warm elegance.
+              </p>
+                
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 82,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 11,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!--product 19-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://theperfumeclub.pk/cdn/shop/products/TOMFORDTUSCANLEATHEREDP100ML.png?v=1680432601"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tom Ford Tuscan Leather</h3>
+              <p class="text-gray-600 mb-4">
+               Tuscan Leather 100ml 
+              </p>
+              
+                 <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 150,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 20,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 20-->
+            <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://tiemnuochoa.vn/wp-content/uploads/2023/08/Louis-Vuitton-California-Dream-100ml.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Louis Vuitton California Dream</h3>
+              <p class="text-gray-600 mb-4">
+               California Dream 100ml 
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 170,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 32,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 21-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://perfumedubai.com/cdn/shop/files/Chanel-Bleu-Edp-For-Men-100ml-2_460x@2x.jpg?v=1728552108"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Blue De Chanel</h3>
+              <p class="text-gray-600 mb-4">
+               Blue De Chanel 100ml 
+              </p>
+               
+                 <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 50,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 10,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 22-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://theskinfit.com/cdn/shop/files/dunhill_desire_red_men_edt_100ml_perfume_i260.jpg?v=1747979149&width=1946"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dunhil Desire Red</h3>
+              <p class="text-gray-600 mb-4">
+               Desire Red 100ml 
+              </p>
+                
+             <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 10,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 4900</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 23-->
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://springs.com.pk/cdn/shop/products/085715801555_grande.gif?v=1754922377"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dunhil Desire Blue</h3>
+              <p class="text-gray-600 mb-4">
+               Desire Blue 100ml 
+              </p>
+               
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 10,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 4900</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- product 24-->
+         <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://theperfumeshop.pk/wp-content/uploads/2023/11/acqua-di-gio-edp-by-giorgio-armani-the-perfume-shop-pk-1.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Armani Aqua Di Gio</h3>
+              <p class="text-gray-600 mb-4">
+               Aqua Di Gio 100ml 
+              </p>
+                
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 30,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        <!--product 25-->
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.armanibeauty.sa/dw/image/v2/BFZH_PRD/on/demandware.static/-/Sites-armanibeauty-master-catalog/default/dw6d536196/Top%20SKUs%20Images/ww-00086-arm-packshots/GA_2022_EA-SWY-EDT_SL_Digital_RVB-3000.jpg?sw=1200&sh=1200"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Giorgio Armani Stronger With You</h3>
+              <p class="text-gray-600 mb-4">
+               Stronger with you Absolutely 100ml
+              </p>
+              
+                <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 32,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+<!-- product 26-->
+        <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://aromatica.one/wp-content/uploads/2024/03/DSC05845-1-600x615.jpg"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Giorgio Armani Stronger With You</h3>
+              <p class="text-gray-600 mb-4">
+               Stronger with you Intensely 100ml
+              </p>
+             
+
+            <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 35,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!--product 27-->
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://static.sweetcare.com/img/prd/488/v-638439626520117225/yves-saint-laurent-005581ys_03.webp"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">YSL Black Opium</h3>
+              <p class="text-gray-600 mb-4">
+               Black Opium 100ml. <br>
+               Sweet, addictive, dark seduction.
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 50,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+        <!--product 28-->
+         <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.perfumily.com.pk/cdn/shop/files/21_e3396982-bbff-4e36-a1be-55780de12462.jpg?v=1750162690"
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Hugo Boss Energise</h3>
+              <p class="text-gray-600 mb-4">
+               Energise 125ml. <br>
+               Fresh, vibrant, youthfull energy.
+              </p>
+              
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 15,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        <!--product 29-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.solippy.co.uk/wp-content/uploads/2017/05/533342.jpg"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Giorgio Armani</h3>
+              <p class="text-gray-600 mb-4">
+               Armani Code 75ml
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 25,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+           
+         <!--product 30-->
+                <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://donze.lk/wp-content/uploads/2024/10/versace-dylan-blue-pour-homme-eau-de-toilette-100ml-790866_grande.webp"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Versace Dylan Blue</h3>
+              <p class="text-gray-600 mb-4">
+                 Dylan Blue 100ml
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 20,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+         <!-- product 31-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://impressivestore.pk/wp-content/uploads/2023/07/JOOP-JUMP-2-modified.png"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Joop Jump</h3>
+              <p class="text-gray-600 mb-4">
+                 Joop Jump 100ml
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 8000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 4500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- prod 32-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9f9vjcQiuT30IqJhT13AF-z-bIHynd9Nj_uZnslYWhEknrFNDs8mX5pAYQmPOa0voQO0&usqp=CAU"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Davidoff Cool Water</h3>
+              <p class="text-gray-600 mb-4">
+                Cool Water 100ml For Women
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 8500</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 4000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+         <!-- product 33-->
+
+          <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://res.cloudinary.com/zinodavidoff/image/upload/s--N7sJRc9m--/DAVIDOFF_Fragrances_CoolWater_EDT-125ml.png?_a=BAAAV6Bs"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Davidoff Cool Water</h3>
+              <p class="text-gray-600 mb-4">
+                 Cool Water 125ml For Men 
+              </p>
+             
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 10,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 4500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 34-->
+            <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://media.4rgos.it/i/Argos/9607947_R_Z001A?w=750&h=440&qlt=70"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Giorgio Armani SI</h3>
+              <p class="text-gray-600 mb-4">
+                 Si EDP 100ml
+              </p>
+              
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 40,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 35-->
+            <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.agoratopia.com/_image?w=555&h=555&fit=cover&href=baccarat-rouge-540-extrait-70ml+%282%29.webp"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Maison Francis </h3>
+              <p class="text-gray-600 mb-4">
+                 Baccarat Rouge 540 70ml
+              </p>
+              
+              <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 140,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 23,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 36-->
+            <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://reblscents.com/cdn/shop/files/Untitled_1800x2700px_-4.png?v=1685478721&width=1946"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Gucci Bloom</h3>
+              <p class="text-gray-600 mb-4">
+                 Gucci Bloom 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 30,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- prod 37-->
+                <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://creedboutique.com/cdn/shop/files/aventus-100ml-bottle_3413e5f4-3eee-40b3-8451-2546a370ec5b.jpg?v=1734710265&width=1500"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Creed Aventus</h3>
+              <p class="text-gray-600 mb-4">
+                 Creed Aventus 100ml. <br>
+                 Fresh, powerfull, and iconic.
+              </p>
+            
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 104,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 18,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+           <!-- product 38-->
+                 <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.olfactoryfactoryllc.com/cdn/shop/files/Creed_-_Green_Irish_Tweed.jpg?v=1742558830"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Creed Green Irish Tweed</h3>
+              <p class="text-gray-600 mb-4">
+                Green Irish Tweed 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 120,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 20,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+  
+
+          <!-- product 39-->
+                <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://parisparfums.fr/5542-medium_default/millesime-imperial-eau-de-parfum.jpg"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Creed Millesime Imperial</h3>
+              <p class="text-gray-600 mb-4">
+                Millesime Imperial 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 82,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 22,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- product 40-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="unisex"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://www.creedfragrances.co.uk/cdn/shop/products/silver-mountain-water-100ml-bottle.jpg?v=1693919537&width=750"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Creed Silver Mountain Water</h3>
+              <p class="text-gray-600 mb-4">
+                Silver Mountain Water 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 110,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 17,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+           <!-- product 41-->
+            <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://media.allure.com/photos/598b6075ba54fd17654202ef/16:9/w_1160%2Cc_limit/BOB-2017-Scent-MarcJacobs-Lede.jpg"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Marc Jacobs Daisy</h3>
+              <p class="text-gray-600 mb-4">
+                Jacobs Daisy 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 26,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- product 42-->
+                  <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://media.ulta.com/i/ulta/2569271?w=200&h=200&fmt=auto"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> YSL Libre EDP</h3>
+              <p class="text-gray-600 mb-4">
+                Libre EDP 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 50,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 43-->
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://static.webx.pk/files/8079/Images/61ooe8fqpol.-ac-uf1000,1000-ql80--8079-0-220124043420666.jpg"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Uomo Born In Roma</h3>
+              <p class="text-gray-600 mb-4">
+               Valentino 50ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 34,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 5000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 44-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://lipglossismylife.com/wp-content/uploads/2014/09/my-burberry-fragrance-bottle.jpg?w=640"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> My Burberry</h3>
+              <p class="text-gray-600 mb-4">
+                Burberry 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 35,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <!-- product 45-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://beautybaskets.in/wp-content/uploads/2021/09/CD-Sauvage-EDp-M-200ml-1-FILEminimizer-1200x1200.jpg"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Dior Sauvage</h3>
+              <p class="text-gray-600 mb-4">
+                 Sauvage 100ml
+              </p>
+             
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 50,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 12,000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+  
+
+          <!-- product 46-->
+             <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="men"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://theperfumeclub.pk/cdn/shop/files/Screenshot2025-01-13154804_1800x1800.png?v=1736765300"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Dior Sauvage </h3>
+              <p class="text-gray-600 mb-4">
+                Sauvage Elixir 60ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 94,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 9000</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+   
+
+          <!-- product 47-->
+                 <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://malak.com.pk/cdn/shop/files/3145891264906.jpg?v=1754592911"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Chanel Chance EDT </h3>
+              <p class="text-gray-600 mb-4">
+                Chance EDT 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 66,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 7500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- product 48-->
+
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://mycare.pk/cdn/shop/files/chanel_chance_eau_tendre_w_edt_50ml1_643x696_crop_top.jpg?v=1703706211"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Chance Eau Tendre </h3>
+              <p class="text-gray-600 mb-4">
+                Chance Eau Tendre 100ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 44,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 8500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+              
+          <!-- product 49-->
+          
+           <div
+            class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in"
+            data-category="women"
+            style="animation-delay: 0.7s"
+          >
+            <div class="relative">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM07ATo8HVLzIAo0X9u4U4an2sr8yFaAkS8g&s"
+        
+                alt="Alpine Fresh"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2"> Gucci Flora </h3>
+              <p class="text-gray-600 mb-4">
+                Gucci Flora 50ml
+              </p>
+              
+               <div class=" mb-4"> 
+                <div> 
+                  <span style="color: red; text-decoration: line-through; font-size: medium; margin-right: 10px;"> RS 34,000</span>
+                  <span class="text-1xl font-bold text-purple-600"> RS 6500</span>
+                  </div>
+                <div style="margin-top: 5px; color: gold; font-size: 16px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <button
+                class="add-to-cart w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                data-id="8"
+                data-name="Alpine Fresh"
+                data-price="70"
+                data-image="/placeholder.svg?height=300&width=250"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+            
+             
+
+
+
+         <!-- end of products-->
+         
+         <a  href="https://wa.me/923154551606" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  aria-label="Chat on WhatsApp"
+  class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 p-3 shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 ease-in-out animate-fadeInUp"
+>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+    alt="WhatsApp" 
+    class="h-12 w-12"
+  />
+</a>
+
+
+
+        </div>
+      </div>
+    </section>
+    <!--scent for every season-->
+    <section id="seasonal-scents" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2
+          class="text-4xl md:text-5xl font-playfair font-bold mb-12 tracking-wide"
+        >
+          Scents for Every Season
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Summer -->
+          <div class="rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1551523713-c1473aa01d9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHN1bW1lcnxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Summer"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"
+            >
+              <span class="text-white text-2xl font-semibold tracking-widest"
+                >SUMMER</span
+              >
+            </div>
+          </div>
+
+          <!-- Spring -->
+          <div class="rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nfGVufDB8fDB8fHww"
+              alt="Spring"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"
+            >
+              <span class="text-white text-2xl font-semibold tracking-widest"
+                >SPRING</span
+              >
+            </div>
+          </div>
+
+          <!-- Winter -->
+          <div class="rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2ludGVyfGVufDB8fDB8fHww"
+              alt="Winter"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"
+            >
+              <span class="text-white text-2xl font-semibold tracking-widest"
+                >WINTER</span
+              >
+            </div>
+          </div>
+
+          <!-- Autumn -->
+          <div class="rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1669406584379-59f827e4d35e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXV0bW58ZW58MHx8MHx8fDA%3D"
+              alt="Autumn"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"
+            >
+              <span class="text-white text-2xl font-semibold tracking-widest"
+                >AUTUMN</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="slide-in-left">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6">
+              Our Story
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Founded in 1985, Elmihara has been crafting exceptional fragrances
+              that capture the essence of luxury and sophistication. Our master
+              perfumers blend traditional techniques with modern innovation to
+              create scents that tell unique stories.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              Each fragrance in our collection is carefully composed using the
+              finest ingredients sourced from around the world, ensuring every
+              bottle delivers an unforgettable olfactory experience.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">35+</div>
+                <div class="text-gray-600">Years of Excellence</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">100k+</div>
+                <div class="text-gray-600">Happy Customers</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-in-right">
+            <img
+              src="https://images.unsplash.com/photo-1557827983-012eb6ea8dc1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHBlcmZ1bWVzfGVufDB8fDB8fHww"
+              alt="Perfume Laboratory"
+              class="rounded-2xl shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="why-choose-us" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-center text-3xl md:text-4xl font-playfair font-bold mb-12 tracking-wide"
+        >
+          WHY CHOOSE US?
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+          <!-- Card 1 -->
+          <div
+            class="border rounded-3xl p-8 text-center h-full hover:shadow-lg transition-all duration-300"
+          >
+            <i class="fa-solid fa-gift text-4xl text-purple-600 mb-4"></i>
+            <p class="text-lg font-medium text-gray-600">
+              FREE FRAGRANCE BOX,<br />SPRAY TESTER & GIFT BAGS
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="border rounded-3xl p-8 text-center h-full hover:shadow-lg transition-all duration-300"
+          >
+            <i class="fa-solid fa-rotate text-4xl text-purple-600 mb-4"></i>
+            <p class="text-lg font-medium text-gray-600">
+              EASY RETURN AND<br />EXCHANGE
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="border rounded-3xl p-8 text-center h-full hover:shadow-lg transition-all duration-300"
+          >
+            <i class="fa-solid fa-thumbs-up text-4xl text-purple-600 mb-4"></i>
+            <p class="text-lg font-medium text-gray-600">
+              500,000 HAPPY<br />CUSTOMERS
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="border rounded-3xl p-8 text-center h-full hover:shadow-lg transition-all duration-300"
+          >
+            <i class="fa-solid fa-trophy text-4xl text-purple-600 mb-4"></i>
+            <p class="text-lg font-medium text-gray-600">
+              25,000+ 5 STAR REVIEWS
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="reviews" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4">
+            Let Customers Speak for Us
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Hear what our customers have to say about their favorite fragrances.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+
+          <!-- Review 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 fade-in">
+            <div class="flex items-center mb-4">
+              
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">Muhammad Ali</h4>
+                <p class="text-gray-500 text-sm">Verified Buyer</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Baccarat rouge is absolutely stunning! The scent lasts all day and
+              I always get compliments."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg p-8 fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center mb-4">
+              
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">Hina Zahid</h4>
+                <p class="text-gray-500 text-sm">Verified Buyer</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Gucci Flora is my go-to fragrance. It's fresh, and
+              perfect for everyday wear I just love it."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg p-8 fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-4">
+              
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">Yasmeen</h4>
+                <p class="text-gray-500 text-sm">Verified Buyer</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Black Opium is so unique and captivating. I feel confident
+              every time I wear it. I have ordered this third time."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg p-8 fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex items-center mb-4">
+              
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">Muhammad Raza</h4>
+                <p class="text-gray-500 text-sm">Verified Buyer</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              " Ombre Leather is a masterpiece. The warm woody notes are perfect
+              for evening wear."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg p-8 fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-4">
+             
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">Ayan Ahmed</h4>
+                <p class="text-gray-500 text-sm">Verified Buyer</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Davidoff Cool Water is so refreshing! It's perfect for summer and keeps
+              me energized all day."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Have questions about our fragrances? We're here to help you find
+            your perfect scent.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="fade-in">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                  />
+                </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="fade-in">
+            <div class="space-y-8">
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <i
+                      class="fas fa-map-marker-alt text-purple-600 text-xl w-6"
+                    ></i>
+                    <span class="ml-4">Lahore,Pakistan</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-phone text-purple-600 text-xl w-6"></i>
+                    <span class="ml-4">+92 3154551606</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-envelope text-purple-600 text-xl w-6"></i>
+                    <span class="ml-4">ELMIHARA@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-semibold mb-6">Open at</h3>
+                <div class="space-y-2">
+                  <div class="flex justify-between">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span> 24/7</span>
+                    <span></span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-2xl font-playfair font-bold mb-6">
+              <i class="fas fa-spray-can mr-2"></i>ELMIHARA
+            </h3>
+            <p class="text-gray-400 mb-6">
+              Crafting luxury fragrances that capture the essence of elegance
+              and sophistication.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+              >
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+              >
+                <i class="fab fa-youtube text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Categories</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Men's Fragrances</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Women's Fragrances</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Unisex Collection</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                  >Limited Edition</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get updates on new fragrances and exclusive offers.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500 transition-colors duration-300"
+              />
+              <button
+                class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-r-lg transition-all duration-300"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">
+              &copy; 2025 Elmihara Perfumes. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                >Shipping Info</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Shopping Cart</h2>
+          <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <div id="cart-items" class="space-y-4 mb-6">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="border-t pt-4">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-xl font-semibold"
+              >Total: $<span id="cart-total">0</span></span
+            >
+          </div>
+          <button
+            id="checkout-btn"
+            class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-lg font-semibold transition-all duration-300"
+          >
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
